@@ -117,3 +117,4 @@ FROM cte
 GROUP BY first_name
 ORDER BY count_top_name DESC
 ;
+
