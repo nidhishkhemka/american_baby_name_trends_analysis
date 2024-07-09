@@ -8,7 +8,6 @@ HAVING COUNT(DISTINCT year) = 101
 ORDER BY total_num DESC
 ;
 
-
 -- 2. Classify each name's popularity according to the number of years that the name appears in the dataset.
 
 SELECT 
@@ -25,7 +24,6 @@ GROUP BY first_name
 ORDER BY first_name ASC
 ;
 
-
 -- 3. Take a look at the ten highest-ranked American female names in our dataset.
 
 SELECT
@@ -39,7 +37,6 @@ ORDER BY name_rank ASC
 LIMIT 10
 ;
 
-
 -- 4. A friend would like help choosing a name for her baby, a girl. She doesn't like any of the top-ranked names we found in the previous task. She's set on a traditionally female name ending in the letter 'a' since she's heard that vowels in baby names are trendy. She's also looking for a name that has been popular in the years since 2015.
 
 SELECT first_name
@@ -50,7 +47,6 @@ WHERE sex = 'F'
 GROUP BY first_name
 ORDER BY SUM(num) DESC
 ;
-
 
 -- 5. Find the cumulative number of babies named Olivia over the years since the name first appeared in our dataset.
 
@@ -76,7 +72,6 @@ WHERE first_name = 'Olivia'
 ORDER BY year ASC
 ;
 
-
 -- 6. Write a query that selects the year and the maximum num of babies given any male name in that year.
 
 SELECT year, MAX(num) AS max_num
@@ -85,7 +80,6 @@ WHERE sex = 'M'
 GROUP BY year
 ORDER BY year ASC
 ;
-
 
 -- 7. Using the previous task's code as a subquery, look up the first_name that corresponds to the maximum number of babies given a specific male name in a year.
 
@@ -101,7 +95,6 @@ JOIN (
     AND b1.num = b2.max_num
 ORDER BY year DESC
 ;
-
 
 -- 8. Return a list of first names that have been the top male first name in any year along with a count of the number of years that name has been the top name.
 
