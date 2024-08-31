@@ -16,6 +16,3 @@ The primary objective of this project is to use SQL for exploratory data analysi
 3. What are the most common names in each decade?
 4. How has the diversity of baby names changed over time?
 5. What are the least common names given to babies?
-
-## Acknowledgements - 
-- Data provided by the United States Social Security Administration.
