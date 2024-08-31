@@ -1,4 +1,4 @@
-# American Baby Name Trends Analysis
+# American Baby Names Trends Analysis
 
 ## Case Study - 
 The purpose of this project is to perform an exploratory data analysis (EDA) on American baby names from 1920 to 2020, extracting meaningful insights into naming trends over the years. This analysis will provide a comprehensive understanding of how baby names have evolved, highlighting the most popular names and identifying patterns in naming conventions.
