@@ -1,4 +1,4 @@
--- 1. Find names that have been given to over 5,000 babies of either sex every year for the 101 years from 1920 through 2020
+-- 1. Find names that have been given to over 5,000 babies of either sex every year for the 101 years from 1920 through 2020.
 
 SELECT first_name, SUM(num) AS total_num
 FROM baby_names
@@ -14,9 +14,9 @@ SELECT
     first_name,
     SUM(num),
     CASE
-	WHEN COUNT(*) > 80 THEN 'Classic'
-	WHEN COUNT(*) > 50 THEN 'Semi-classic'
-	WHEN COUNT(*) > 20 THEN 'Semi-trendy'
+	WHEN COUNT(DISTINCT year) > 80 THEN 'Classic'
+	WHEN COUNT(DISTINCT year) > 50 THEN 'Semi-classic'
+	WHEN COUNT(DISTINCT year) > 20 THEN 'Semi-trendy'
 	ELSE 'Trendy'
     END AS popularity_type
 FROM baby_names
@@ -24,7 +24,7 @@ GROUP BY first_name
 ORDER BY first_name ASC
 ;
 
--- 3. Take a look at the ten highest-ranked American female names in our dataset.
+-- 3. Find the ten highest-ranked American female names in the dataset.
 
 SELECT
     RANK() OVER(ORDER BY SUM(num) DESC) AS name_rank,
